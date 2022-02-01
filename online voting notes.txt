@@ -1,0 +1,41 @@
+Online voting system is a user friendly portal that makes the voting simple, secure and hassle free. 
+
+From the voter's point of view, the user can check out the candidates and their details of the ongoing election before proceeding to vote. This feature is available to you on the portal's dashboard irrespective of the fact you are logged in or not
+
+------
+
+Secondly, to vote ,  you have to register yourself on the portal. This includes layers of verification.
+
+We have added verification to our signup page such as -
+Age >= 18
+Username only alphabets
+Upload passport photo for face verification.
+User's valid voter ID and the corresponding email ID should be registered in the government database (Here we have a created a dummy database with voter ID's 1234560 - 1234569), only then will you be able to sign up. 
+
+Once, you sign up successfully,  you will be sent a verification mail to confirm your registration as a voter.(we have used php mailer)
+
+
+Once registered and authenticated, you may proceed to login .For added security, we have added OTP verification so that no one with your account credentials will be able to breach your account without you getting notified.
+
+Only when the OTP entered matches the one we sent, the user will be able to log in. OTP once it is used, will be expired
+
+--------
+
+When you choose to caste your vote,  you will be asked for face verification. The snapshot taken will be compared with the passport photo uploaded by you. If the photos are same, it will lead you to Voting Page and you will be able to vote.
+If not, it will bring you to your landing page and automatically log you out. 
+This added authentication ensures that even if someone breached into your account with your credentials, they wont be able to caste your vote!
+
+--------
+
+Also we ensure that user only votes for once. If he/she tries to vote again , they will be alerted and not allowed to.proceed to the virtual poll booth.
+_
+
+ADMIN PANEL
+
+Only those who have admin ID and Password credentials will be able to login as an admin. The data for the same is directly fed into our database.
+
+The ADMIN has rights to insert, update and delete the candidates standing for the election
+
+Only the admin can view the related statistics of the ongoing election ( i.e the number of votes each candidate received, number of people who voted till now, the leading party etc.). 
+
+The data is simplified to read using the various graphical representations
